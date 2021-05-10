@@ -5,9 +5,13 @@ Home: https://github.com/RemiTheWarrior/plasma-boundaries
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/plasmaboundaries-feedstock/blob/master/LICENSE.txt)
 
 Summary: Determine plasma flux functions for various plasma parameters and plasma configurations.
+
+Development: https://github.com/RemiTheWarrior/plasma-boundaries
+
+Documentation: https://plasma-boundaries.readthedocs.io/en/latest/
 
 'This code computes and plots analytical solutions of the Grad-Shafranov (GS) equation for studying plasma equilibrium,
 stability and transport in fusion reactors based on the work of A. Cerfon and J. Freidberg. Details on the method can be
@@ -41,6 +45,7 @@ Installing `plasmaboundaries` from the `conda-forge` channel can be achieved by 
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `plasmaboundaries` can be installed with:
@@ -111,9 +116,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
