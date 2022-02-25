@@ -10,16 +10,16 @@ source:
   sha256: 21fd323aaba978fa17efaa0cecf89fdbdf10ef5bee78d2fe7d2212a32a9439d5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - matplotlib-base
     - scipy
     - numpy
@@ -47,3 +47,5 @@ about:
 extra:
   recipe-maintainers:
     - RemiTheWarrior
+    - RemDelaporteMathurin
+    - shimwell
