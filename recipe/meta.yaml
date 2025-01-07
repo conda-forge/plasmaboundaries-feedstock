@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 21fd323aaba978fa17efaa0cecf89fdbdf10ef5bee78d2fe7d2212a32a9439d5
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - matplotlib-base
     - scipy
     - numpy
     - sympy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - plasmaboundaries
 
@@ -46,6 +48,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - RemiTheWarrior
     - RemDelaporteMathurin
     - shimwell
